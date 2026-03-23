@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | Luna & Lace Salon</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="container nav-inner">
+        <div class="brand">Luna & Lace</div>
+        <div class="nav-links">
+          <a data-nav href="index.html">Home</a>
+          <a data-nav href="services.html">Services</a>
+          <a data-nav href="booking.html">Book</a>
+          <a data-nav href="dashboard.html">Dashboard</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container">
+      <section class="section">
+        <h2>Appointment Dashboard</h2>
+        <div class="form-card">
+          <p class="notice">Latest booking details are shown below.</p>
+
+          <div id="appointment-list" class="list" style="margin-top: 16px;">
+            <p><strong>Full Name:</strong> <span id="display-name"></span></p>
+            <p><strong>Phone Number:</strong> <span id="display-phone"></span></p>
+            <p><strong>Service:</strong> <span id="display-service"></span></p>
+            <p><strong>Date:</strong> <span id="display-date"></span></p>
+            <p><strong>Time:</strong> <span id="display-time"></span></p>
+            <p><strong>Notes:</strong> <span id="display-notes"></span></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer container">
+      &copy; 2026 Luna & Lace Salon | Open daily 9:00 AM - 7:00 PM | 074 207 5455
+    </footer>
+
+    <script>
+  const params = new URLSearchParams(window.location.search);
+
+  document.getElementById("display-name").textContent =
+    params.get("name") || "Not provided";
+
+  document.getElementById("display-phone").textContent =
+    params.get("phone") || "Not provided";
+
+  document.getElementById("display-service").textContent =
+    params.get("service") || "Not provided";
+
+  document.getElementById("display-date").textContent =
+    params.get("date") || "Not provided";
+
+  document.getElementById("display-time").textContent =
+    params.get("time") || "Not provided";
+
+  document.getElementById("display-notes").textContent =
+    params.get("notes") || "No notes";
+</script>
+  </body>
+</html>

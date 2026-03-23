@@ -1,0 +1,10 @@
+{
+  "name": "salon-appointment-system",
+  "version": "1.0.0",
+  "description": "Simple salon appointment system with vanilla HTML/CSS/JS and Node.js backend.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "license": "MIT"
+}

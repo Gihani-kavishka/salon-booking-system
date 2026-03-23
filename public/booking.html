@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book | Luna & Lace Salon</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="container nav-inner">
+        <div class="brand">Luna & Lace</div>
+        <div class="nav-links">
+          <a data-nav href="index.html">Home</a>
+          <a data-nav href="services.html">Services</a>
+          <a data-nav href="booking.html">Book</a>
+          <a data-nav href="dashboard.html">Dashboard</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container">
+      <section class="section">
+        <h2>Book your appointment</h2>
+        <div class="form-card">
+          <form id="booking-form">
+            <div class="form-group">
+              <label for="name">Full name</label>
+              <input id="name" name="name" type="text" placeholder="Enter your name here" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone number</label>
+              <input id="phone" name="phone" type="tel" placeholder="07X-XXXX-XXX" required />
+            </div>
+            <div class="form-group">
+              <label for="service">Service</label>
+              <select id="service" name="service" required>
+                <option value="">Select a service</option>
+                 <option value="haircut">Hair Cut</option>
+                <option value="facial">Scalp Spa</option>
+                 <option value="massage">Beard Trim</option>
+               <option value="haircolor">Color & Style</option>
+              </select>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+              <div class="form-group">
+                <label for="date">Date</label>
+                <input id="date" name="date" type="date" required />
+              </div>
+              <div class="form-group">
+                <label for="time">Time</label>
+                <input id="time" name="time" type="time" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="notes">Notes</label>
+              <textarea id="notes" name="notes" placeholder="Any special preferences or hair concerns?"></textarea>
+            </div>
+            <button class="button" type="submit">Confirm appointment</button>
+            <div id="booking-status" class="notice">Fill the form to reserve your slot.</div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer container">
+      &copy; 2026 Luna & Lace Salon | Open daily 9:00 AM - 7:00 PM | 074 207 5455
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/booking.js"></script>
+  </body>
+</html>
